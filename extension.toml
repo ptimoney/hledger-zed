@@ -8,7 +8,7 @@ repository = "https://github.com/ptimoney/hledger-zed"
 
 [grammars.hledger]
 repository = "file:///home/patrick/Development/hledger-lsp-group/tree-sitter-hledger"
-rev = "95e6ff9e67ba68e0dfabb2332be233d89538005a"
+rev = "HEAD"
 
 [language_servers.hledger-lsp]
 name = "hledger Language Server"
