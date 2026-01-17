@@ -1,50 +1,48 @@
-; ============================================================================
-; Dates
-; ============================================================================
-(date) @number
-(effective_date (date) @number)
+; Transaction dates
+(date) @keyword.date
 
-; ============================================================================
-; Transaction header components
-; ============================================================================
-(status) @keyword
-(code) @tag
+; Status markers
+(status) @keyword.modifier
+
+; Transaction codes
+(code) @string.special
+
+; Descriptions
 (description) @string
 
-; ============================================================================
-; Accounts
-; ============================================================================
+; Account names
 (account) @type
 
-; ============================================================================
-; Amounts
-; ============================================================================
+; Amounts - quantities and commodities
 (quantity) @number
-(commodity) @constant
+(commodity) @string.special.symbol
+
+; Amount signs
 (sign) @operator
 
-; ============================================================================
 ; Directives
-; ============================================================================
-"account" @keyword
-"commodity" @keyword
-"include" @keyword
-"payee" @keyword
-"tag" @keyword
+"account" @keyword.directive
+"commodity" @keyword.directive
+"include" @keyword.import
+"payee" @keyword.directive
+"tag" @keyword.directive
 
-; Directive arguments
-(include_directive (file_path) @string.special.path)
-(payee_directive (payee_name) @string)
-(tag_directive (tag_name) @attribute)
+; Directive values
+(payee_name) @string
+(file_path) @string.special
 
-; ============================================================================
 ; Comments
-; ============================================================================
-(comment) @comment
+(line_comment) @comment
+(block_comment) @comment
+(inline_comment) @comment
 
-; ============================================================================
-; Punctuation
-; ============================================================================
+; Operators and punctuation
+"=" @operator
+"@" @operator
+"@@" @operator
 "(" @punctuation.bracket
 ")" @punctuation.bracket
-"=" @operator
+
+; Tags
+(tag_name) @tag
+(tag_value) @property
