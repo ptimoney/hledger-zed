@@ -7,8 +7,8 @@ description = "Language Server Protocol support for the hledger plain text accou
 repository = "https://github.com/ptimoney/hledger-zed"
 
 [grammars.hledger]
-repository = "file:///home/patrick/Development/hledger-lsp-group/tree-sitter-hledger"
-rev = "510f8242efccbec0557373bc8bb1ebe3b74115af"
+repository = "https://github.com/ptimoney/tree-sitter-hledger"
+rev = "3f68c44f86c5668a431c64f4af3375a9f4699fd5"
 
 [language_servers.hledger-lsp]
 name = "hledger Language Server"
